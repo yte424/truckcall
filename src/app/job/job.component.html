@@ -1,0 +1,42 @@
+<div class="row">
+<div  class="list-group col-8">
+
+        <h3 >Übersicht über Fahraufträge</h3>
+
+ 
+  <a class="list-group-item list-group-item-action" *ngFor="let job of jobList" 
+    [class.active]="job === selectedJob"
+    (click)="onSelect(job)">
+  {{job.item}} von {{job.source}} nach  {{job.destination}}  
+</a>
+</div>
+<div class="col-4">
+  <app-job-detail [selectedJob]="selectedJob"></app-job-detail>
+</div>
+
+</div>
+<!-- <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Column heading</th>
+      <th scope="col">Column heading</th>
+      <th scope="col">Column heading</th>
+    </tr>
+  </thead>
+  <tbody> -->
+
+
+
+        <!-- <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+            <div class="card-header">Aktueller Jahrauftrag</div>
+            <div class="card-body">
+              <h4 class="card-title">Info card title</h4>
+              <p class="card-text">
+                <span>AuftragsId: {{singleJob.id}}</span> <br>
+                <span>Abholort: {{singleJob.source}}</span> <br>
+                <span>Ziel: {{singleJob.destination}}</span> <br>
+                <span>Status: {{singleJob.status}}</span>
+              </p>
+            </div>
+          </div> -->

@@ -1,0 +1,17 @@
+
+  <div *ngIf="selectedJob">
+  <h3>Detail Informationen</h3><br>
+    <div *ngIf="selectedJob" class="card border-secondary mb-3" style="max-width: 20rem;">
+      <div class="card-header">Detailansicht Fahrauftrag</div>
+      <div class="card-body">
+        <p class="card-text">
+          <span>AuftragsId: {{selectedJob.id}}</span> <br>
+          <span>Was: {{selectedJob.item}}</span><br>
+          <span>Abholort: {{selectedJob.source}}</span> <br>
+          <span>Ziel: {{selectedJob.destination}}</span> <br>
+          <span>Status: {{selectedJob.status}}</span>
+        </p>
+      </div>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>
